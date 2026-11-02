@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo App</title>
+    <!-- Load React and React-DOM using CDN -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <!-- Load Babel so we can write JSX directly in the browser -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4efe3;
+      color: #111;
+      max-width: 580px;
+      margin: 40px auto;
+      padding: 0 15px;
+    }
+    .add-row {
+      display: flex;
+      gap: 8px;
+    }
+    .add-row input {
+      flex: 1;
+    }
+    .filters {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 12px 0;
+      font-size: 13px;
+    }
+    .filter-btn.active {
+      font-weight: bold;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 0;
+      border-bottom: 1px solid #111;
+    }
+    li span {
+      flex: 1;
+    }
+    li.done span {
+      text-decoration: line-through;
+      opacity: 0.5;
+    }
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 12px;
+    }
+  </style>
+</head>
+<body>
+
+    <!-- React will render our app inside this div -->
+    <div id="root"></div>
+
+    <!-- Include our React code -->
+    <script type="text/babel" src="app.js"></script>
+
+</body>
+</html>
